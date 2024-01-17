@@ -1,0 +1,32 @@
+# Challenge 1
+'''Given two sorted arrays (arr1, arr2) and a number, k, create a method, sortArrays that returns a sorted array of the first k elements.
+Bonus points if you write this in one line - it's possible!'''
+
+import numpy as np # Numpy has methods that sort and concatenate two lists 
+# Utilizes a lambda function since function is used oncde
+sortArrays = lambda arr1, arr2, k: np.sort(np.concatenate((arr1, arr2)))[:k] 
+# This function returns from 0 till the k index
+
+
+# Test Case:
+arr1 = [1, 3, 5, 8]
+arr2 = [1, 2, 3]
+k = 5
+
+print(sortArrays(arr1, arr2, k)) 
+
+
+
+# Challenge 4
+'''Write a function, isPalindrome? that tests whether a string is a palindrome. A palindrome is defined as a word that is the exact same forwards as it is backwards.
+Bonus points if you can make the function body one line!'''
+
+
+# If it is the same thing in reverse it prints is palindrome! and if not it prints that it is not by using a terenary expression to make it one line
+def isPalindrome(user_input): 
+    return print(f'"{user_input}" is a palindrome!') if user_input == user_input[::-1] else print(f'"{user_input}" is not a palindrome.') 
+
+user_input = input("Please enter a string: ")
+isPalindrome(user_input)
+
+'''I was unsure how capital letters would work. If needed I would use the capitalize() function to capitalize the letters to make them uniform if neecded'''
